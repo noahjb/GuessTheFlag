@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,31 +23,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JD-hN-4qm">
-                                <rect key="frame" x="87.5" y="100" width="200" height="100"/>
+                                <rect key="frame" x="88" y="100" width="200" height="100"/>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWb-3p-yda"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9Z-9R-Nl4">
-                                <rect key="frame" x="87.5" y="230" width="200" height="100"/>
+                                <rect key="frame" x="88" y="230" width="200" height="100"/>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cMD-th-Ck0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zu-UJ-Xz0">
-                                <rect key="frame" x="87.5" y="360" width="200" height="100"/>
+                                <rect key="frame" x="88" y="360" width="200" height="100"/>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="paT-sy-hm3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaZ-zR-vGZ">
+                                <rect key="frame" x="16" y="528" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="MaZ-zR-vGZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6yp-NI-s3B"/>
+                            <constraint firstItem="MaZ-zR-vGZ" firstAttribute="top" secondItem="5zu-UJ-Xz0" secondAttribute="bottom" constant="68" id="VRl-1k-Tcz"/>
                             <constraint firstItem="0JD-hN-4qm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="XVn-EY-rOV"/>
                             <constraint firstItem="5zu-UJ-Xz0" firstAttribute="top" secondItem="l9Z-9R-Nl4" secondAttribute="bottom" constant="30" id="ZyI-xv-dxR"/>
+                            <constraint firstItem="MaZ-zR-vGZ" firstAttribute="centerX" secondItem="5zu-UJ-Xz0" secondAttribute="centerX" id="ahu-A0-XqH"/>
                             <constraint firstItem="l9Z-9R-Nl4" firstAttribute="top" secondItem="0JD-hN-4qm" secondAttribute="bottom" constant="30" id="cp9-5X-Fj1"/>
                             <constraint firstItem="5zu-UJ-Xz0" firstAttribute="centerX" secondItem="l9Z-9R-Nl4" secondAttribute="centerX" id="csT-O9-vXr"/>
                             <constraint firstItem="l9Z-9R-Nl4" firstAttribute="centerX" secondItem="0JD-hN-4qm" secondAttribute="centerX" id="pe8-IS-P6I"/>
@@ -58,6 +68,7 @@
                         <outlet property="button1" destination="0JD-hN-4qm" id="uJu-e4-smV"/>
                         <outlet property="button2" destination="l9Z-9R-Nl4" id="knF-6A-HYw"/>
                         <outlet property="button3" destination="5zu-UJ-Xz0" id="ea2-h6-qOL"/>
+                        <outlet property="scoreLabel" destination="MaZ-zR-vGZ" id="0Aa-cd-05p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
